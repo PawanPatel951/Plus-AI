@@ -72,6 +72,7 @@ html {
   -webkit-text-size-adjust: 100%;
   overflow-x: hidden;
   max-width: 100%;
+  scroll-padding-top: 90px;
 }
 
 body {
@@ -83,6 +84,8 @@ body {
   max-width: 100%;
   width: 100%;
   position: relative;
+  padding-top: 75px;
+
 }
 
 body.drawer-open, 
@@ -128,15 +131,16 @@ button {
    NAVBAR
    -------------------------------------------------------------------------- */
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
-  background: rgba(255, 255, 255, 0.94);
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(2, 136, 83, 0.09);
-  padding: 12px 0;
-  transition: box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 .navbar.scrolled {
@@ -1793,6 +1797,19 @@ textarea.form-control {
 
   .feature-desc {
     font-size: 0.74rem;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 0;
+  }
+
+  body {
+    padding-top: 65px;
+  }
+
+  html {
+    scroll-padding-top: 80px;
   }
 }
 
